@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prédiction de Chiffre MNIST</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; margin-top: 50px; background-color: #f0f0f0; }
+        h1 { color: #333; }
+        #canvas { border: 2px solid black; background-color: white; cursor: crosshair; }
+        button { margin: 10px; padding: 10px 20px; font-size: 16px; cursor: pointer; }
+        #prediction { font-size: 32px; font-weight: bold; color: #007BFF; height: 40px; }
+    </style>
+</head>
+<body>
+
+    <h1>Dessinez un chiffre de 0 à 9</h1>
+    <canvas id="canvas" width="280" height="280"></canvas>
+    <div>
+        <button id="predict-button">Prédire</button>
+        <button id="clear-button">Effacer</button>
+    </div>
+    <h2>Prédiction : <span id="prediction">...</span></h2>
+    <h3>Aperçu du 28x28 envoyé au modèle</h3>
+    <canvas id="preview-canvas" width="28" height="28" style="image-rendering: pixelated; border: 1px solid #333;"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
