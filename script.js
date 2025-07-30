@@ -116,6 +116,6 @@ predictButton.addEventListener('click', predict);
 window.onload = () => {
     clearCanvas();
     predictButton.disabled = true;
-    predictionSpan.innerText = "Chargement...";
+    predictionSpan.innerText = "...";
     loadModel();
 };
